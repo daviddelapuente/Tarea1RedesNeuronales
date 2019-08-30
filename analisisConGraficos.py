@@ -2,6 +2,8 @@ from NN.dataSetManipulation import *
 from NN.funcionesDeActivacion import *
 from NN.redNeuronal import *
 
+import matplotlib.pyplot as plt
+
 def analisisIris():
 
     data=toFloat(loadData('iris.data'))
@@ -11,9 +13,10 @@ def analisisIris():
     red=redNeuronal(4,[3,2,3],[tanh(),tanh(),Sigmoid()])
     porcentajeAciertos=[]
     errorCadaEpoca=[]
+    epocas=1000
 
     #pasaran x epocas
-    for j in range(1000):
+    for j in range(epocas):
         #esto es una epoca
 
         for i in range(len(xt)):
@@ -65,10 +68,27 @@ def analisisIris():
     print(matrizconfusion[2])
 
     print("----------------------------------------")
+    print("ploting")
+    plt.plot(range(epocas),porcentajeAciertos, '-r', label='porcentaje acierto', color='#000000')
+
+    plt.title('graficos')
+    plt.xlabel('x', color='#1C2833')
+    plt.ylabel('y', color='#1C2833')
+
+    plt.legend(loc='upper left')
+    plt.grid()
+    plt.show()
 
 
+    plt.plot(range(epocas),errorCadaEpoca, '-r', label='error', color='#000000')
 
+    plt.title('graficos')
+    plt.xlabel('x', color='#1C2833')
+    plt.ylabel('y', color='#1C2833')
 
+    plt.legend(loc='upper left')
+    plt.grid()
+    plt.show()
 
 if __name__ == "__main__":
     analisisIris()

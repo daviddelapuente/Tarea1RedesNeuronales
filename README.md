@@ -1,13 +1,13 @@
 # Tarea1RedesNeuronales
 
-##Como correr la tarea?
+## Como correr la tarea?
 
 1) crear un ambiente virtual y activarlo (source venv/bin/activate )
 2) instalar los requiriments.txt (pip install -r requirements)
 3) correr el archivo analisis con python3 (python3 analisis.py)
 4) ver resultados
 
-##Que hay en este repositorio?
+## Que hay en este repositorio?
 
 1) carpeta NN que contiene la red neuronal y todo lo que usa
 2) iris.data, que es un datasets con tipos de flores
@@ -24,8 +24,8 @@ enunciado y sus derivadas
 4) redNeuronal.py: objeto redNeuronal que contiene las funciones forward, backpropagation, entre otras.
 
 
-##Retrospectiva
+## Retrospectiva
 Quiero destacar que la funcion backPropagation de esta red, es la que vimos en clases, por lo que
 es mas facil de programar que otro tipo de modelos pero demora mas en el calculo de resultados.
 
-##analisis
+## analisis

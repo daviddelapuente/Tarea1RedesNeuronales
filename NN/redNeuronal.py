@@ -12,6 +12,8 @@ class redNeuronal:
         self.nEntradas=nEntradas
         self.learningRate=learningRate
         self.funciones=funciones
+        self.aciertos=0
+        self.fallos=0
 
         largoPesos=[]
         largoPesos.append(nEntradas)
@@ -144,3 +146,34 @@ class redNeuronal:
             else:
                 r.append(0)
         return r
+
+    #argmax
+    def getI(self,y):
+        i = 0
+        for j in range(len(y)):
+            if y[j] == 1:
+                return i
+            else:
+                i += 1
+
+
+    #cuenta cuantas predicciones tuvo buena y cuantas malas
+    def anotate(self,yp,yr):
+        mi = self.getI(yp)
+        mj = self.getI(yr)
+        if mi == mj:
+            self.aciertos += 1
+        else:
+            self.fallos += 1
+
+    def resetFallosYaciertos(self):
+        self.fallos=0
+        self.aciertos=0
+
+    def getPorcentajeAccuracy(self):
+        return 100*self.aciertos/(self.aciertos+self.fallos)
+
+    def errorEpoca(self,lyp,lyr):
+        lyp=np.array(lyp)
+        lyr=np.array(lyr)
+        return np.sum((0.5*(lyp-lyr)**2).mean(axis=1))/len(lyp)
