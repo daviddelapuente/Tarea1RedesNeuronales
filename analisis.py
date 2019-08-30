@@ -41,8 +41,9 @@ def analisisIris():
     print("porcentaje de aciertos")
     print(porcentajeAciertos)
     print("----------------------------------------")
-    print(errorCadaEpoca)
+
     print("error cada epoca")
+    print(errorCadaEpoca)
     print("----------------------------------------")
     print("matriz de confusion")
 

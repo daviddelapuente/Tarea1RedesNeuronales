@@ -2,7 +2,7 @@
 
 ## Como correr la tarea?
 
-1) crear un ambiente virtual y activarlo (source venv/bin/activate )
+1) crear un ambiente virtual (virtualenv venv) y activarlo (source venv/bin/activate )
 2) instalar los requiriments.txt (pip install -r requirements)
 3) correr el archivo analisis con python3 (python3 analisis.py)
 4) ver resultados
