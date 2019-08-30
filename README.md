@@ -29,3 +29,50 @@ Quiero destacar que la funcion backPropagation de esta red, es la que vimos en c
 es mas facil de programar que otro tipo de modelos pero demora mas en el calculo de resultados.
 
 ## analisis
+### matris de confusion para 10000 epocas
+
+[14, 0, 5]
+
+[0, 5, 0]
+
+[0, 3, 3]
+
+esta matriz se interpreta de la siguiente forma:
+
+las filas representan las flores que reales.
+la fila 0 representa a iris-setosa, las fila a iris-versicolor y la fila 2 a iris-virginica.
+
+las columnas representan exactamente los mismo pero para las flores predichas por la red.
+
+- de esta forma, toda la diagonal son los aciertos ej M[2,2] = aciertos de virginica
+- cualquier otro indice fuera de la diagonal es una confusion.
+
+
+### grafico porcentaje 
+
+Reference-style: 
+![alt text][porcentaje]
+
+[porcentaje]: src/porcentajeAcierto.png
+
+vemos como el porcentaje de acierto sube
+(si la foto no se ve, ver src/porcentajeAcierto.png)
+### error 
+
+Reference-style: 
+![alt text][error]
+
+[error]: src/porcentajeAcierto.png
+
+vemos como el error baja
+(si la foto no se ve, ver src/error.png)
+
+##Extra
+
+- existe un archivo llamado analisisConGraficos.py
+este se puede correr si esque se tiene una forma para visualisar graficos
+(ej : pycharm)
+
+
+- si las fotos no se pueden ver en este archivo, estan en la carpeta src
+
