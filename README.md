@@ -55,16 +55,20 @@ Reference-style:
 
 [porcentaje]: src/porcentajeAcierto.png
 
-vemos como el porcentaje de acierto sube
+vemos como el porcentaje de acierto sube.
+A medida que pasan las epocas, el porcentaje empieza a estabilizarse y tender a 100.
+
 (si la foto no se ve, ver src/porcentajeAcierto.png)
 ### error 
 
 Reference-style: 
 ![alt text][error]
 
-[error]: src/porcentajeAcierto.png
+[error]: src/error.png
 
 vemos como el error baja
+realizar 1000 epocas no es suficiente para notar un desenso en el error.
+por lo que se realizaron 10.000 epocas para poder mostrar un cambio mas significativo.
 (si la foto no se ve, ver src/error.png)
 
 ##Extra
